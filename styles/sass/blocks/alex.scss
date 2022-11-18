@@ -1,0 +1,28 @@
+.sect-content {
+	min-height: 100%;
+}
+.alex__content {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	column-gap: 30px;
+	
+}
+.alex__text {
+	.title {
+		margin-bottom: 32px;
+
+	}
+
+}
+.alex__parg {
+	margin-bottom: 40px;
+	line-height: calc(32/16);
+}
+.title__sub {}
+.title__heading {}
+.title__heading--big {
+}
+.alex__image {
+	justify-self: end;
+}
