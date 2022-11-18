@@ -1,12 +1,27 @@
 .sect-content {
 	min-height: 100%;
+	padding-top: 123px;
+
+	@include max-screen($sm){
+		padding-top: 70px;
+	}
 }
 .alex__content {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	align-items: center;
 	column-gap: 30px;
-	
+
+	@include max-screen($md){
+		padding-right:45px;
+		padding-left:45px;
+	}
+
+	@include max-screen($sm){
+		grid-template-columns: 1fr;
+		padding-right: 0;
+		grid-row-gap: 40px;
+	}
 }
 .alex__text {
 	.title {
@@ -24,5 +39,44 @@
 .title__heading--big {
 }
 .alex__image {
-	justify-self: end;
+	width: 100%;
+	max-width: 336px;
+	position: relative;
+	&:before{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border-radius: inherit;
+		top: 0;
+		left: 0;
+		transform: rotate(-9.55deg);
+		background-color: $accent;
+	border-radius: 16px;
+	}
+
+	@include min-screen($sm){
+		
+		justify-self: end;
+	}
+
+}
+.image-alex__wrap {
+	position: relative;
+	background-color: $gray;
+	padding-bottom: prc(400, 336);
+	border-radius: 16px;
+	overflow: hidden;
+	
+	background-image: url(../images/dist/alex/lines.svg);
+	background-position: 108% 0;
+	background-repeat: no-repeat;
+	background-size: 65% auto;
+}
+.alex__ava {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	max-height: prc(255, 400);
+
 }
