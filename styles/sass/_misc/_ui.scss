@@ -1,0 +1,38 @@
+/*--------------------ui----------------------*/
+.btn{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 49px;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  background-color: $accent;
+  padding: 5px 24px;
+  font-size: 14px;
+	line-height: 17px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  outline: none;
+  transition: background-color .2s ease;
+  border: 1px solid #F1F1F1;
+	
+  &:hover{
+     background-color: lighten($accent, 5%);
+     color: #fff;
+  }
+   
+		
+  &:active{
+   background-color: darken($accent, 5%);
+   color: #fff;
+  }
+  
+  &-fw{
+   width: 100%;
+  }
+   
+}
+/*--------------------END ui----------------------*/ 

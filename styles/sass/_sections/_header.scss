@@ -1,0 +1,13 @@
+.header{
+	background-color: red;
+	.sidebar-menu{
+		display: flex;
+		li{
+
+		}
+		.dl-submenu{
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+}
