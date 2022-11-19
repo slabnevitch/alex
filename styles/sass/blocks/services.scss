@@ -1,0 +1,27 @@
+.services {
+	background: #FBFBFB;
+}
+.wrapper {}
+.services__content {
+	// padding-top: 30px;
+	// padding-bottom: 30px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.sect-content {}
+.title {}
+.title__sub {}
+.title__headin {}
+.services__cards {
+	width: 100%;
+	display: grid;
+	column-gap: 56px;
+	row-gap: 30px;
+	grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+}
+.services__card {}
+.card-services {}
+.card-services__icon {}
+.card-services__title {}
+.card-services__text {}

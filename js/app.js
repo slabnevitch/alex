@@ -4,8 +4,9 @@
 // window.$ = $
 
 // // Import vendor jQuery plugin example (not module)
-import Parallax from 'parallax-js'
-
+// import Parallax from 'parallax-js'
+// require('./vendor/onepagescroll/onepagescroll.js')
+// require('./vendor/fullpage/full-page-scroll.js')
 //- SERVIVE FUNCTIONS==================
 
 //- remove-class--------------------------
@@ -21,10 +22,10 @@ import Parallax from 'parallax-js'
 //- require('./vendor/libs-vanilla/service-functions/dropdown-toggle.js')
 
 //- isMobile--------------------------
-require('./vendor/libs-vanilla/service-functions/mobileDetect.js')
+// require('./vendor/libs-vanilla/service-functions/mobileDetect.js')
 
 //- All in one file--------------------------
-require('./vendor/libs-vanilla/service-functions/all-functions.js')
+// require('./vendor/libs-vanilla/service-functions/all-functions.js')
 
 
 //- WITH JQUERY===================================
@@ -70,7 +71,7 @@ require('./vendor/libs-vanilla/service-functions/all-functions.js')
 // require('./vendor/libs-vanilla/lazysizes/lazysizes.min.js')
 	
 //- accordion--------------------------
-require('./vendor/libs-vanilla/accordion/vanilla-accordion.js')
+// require('./vendor/libs-vanilla/accordion/vanilla-accordion.js')
 	
 //- tabs--------------------------
 // require('./vendor/libs-vanilla/tabs/tabs-pure.js')
@@ -133,6 +134,7 @@ require('./vendor/libs-vanilla/accordion/vanilla-accordion.js')
 // require('./vendor/color-scheme-switcher.js')
 
 
+
 document.querySelector('.toggle-mnu').onclick = function(e) {
 	this.classList.toggle('on');
 	document.documentElement.classList.toggle('menu-opened');
@@ -140,5 +142,4 @@ document.querySelector('.toggle-mnu').onclick = function(e) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-
 });

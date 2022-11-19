@@ -49,6 +49,7 @@ body{
 // END Прижать футер к низу
 section{
 	height: 100%;
+	overflow-y: auto;
 }
 ul, li{
 	margin: 0;
