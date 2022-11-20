@@ -1,4 +1,5 @@
 node_modules
 dist
 .idea
-js/vendor
+js/vendor/libs
+js/vendor/libs-vanilla

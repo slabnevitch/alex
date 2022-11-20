@@ -48,8 +48,10 @@ body{
 
 // END Прижать футер к низу
 section{
+	// min-height: 100%;
 	height: 100%;
-	overflow-y: auto;
+	// overflow-y: auto;
+	// overflow: hidden;
 }
 ul, li{
 	margin: 0;

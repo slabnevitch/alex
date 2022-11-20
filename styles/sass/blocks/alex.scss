@@ -40,7 +40,7 @@
 }
 .alex__image {
 	width: 100%;
-	max-width: 336px;
+	max-width: 250px;
 	position: relative;
 	&:before{
 		content: '';
@@ -55,6 +55,9 @@
 	border-radius: 16px;
 	}
 
+	@include min-screen($min){
+		max-width: 336px;
+	}
 	@include min-screen($sm){
 		
 		justify-self: end;

@@ -18,7 +18,9 @@
 	display: grid;
 	column-gap: 56px;
 	row-gap: 30px;
-	grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+	// grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+	// grid-template-columns: repeat(auto-fill, minmax(calc(320 - 30px)/2), 1fr);
+	grid-template-columns: repeat(auto-fit, minmax(calc((320px - 30px)/2), 1fr));
 }
 .services__card {}
 .card-services {}
