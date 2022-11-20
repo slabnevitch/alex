@@ -1,10 +1,8 @@
 .sect-content {
 	min-height: 100%;
-	padding-top: 123px;
+	// padding-top: 123px;
 
-	@include max-screen($sm){
-		padding-top: 70px;
-	}
+	
 }
 .alex__content {
 	display: grid;
