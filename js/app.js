@@ -167,12 +167,12 @@ if(document.querySelector('.works__cards') !== null){
 			//preloadImages: false,
 			//lazy: true,
 		  // direction: 'vertical',
-		  loop: true,
+		  // loop: true,
 		  breakpoints: {
 		    // when window width is >= 320px
 		    320: {
 		    	slidesPerView: 1.2,
-		    	spaceBetween: 20,
+		    	spaceBetween: 15,
 			    },
 		    // when window width is >= 480px
 		    480: {

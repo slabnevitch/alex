@@ -9,10 +9,14 @@
 }
 .sect-content {}
 .works__header {
-	display: flex;
-	justify-content: space-between;	
-	align-items: center;
-	margin-bottom: 144px;		
+	margin-bottom: 144px;
+
+	@include min-screen($xss){
+		display: flex;
+		justify-content: space-between;	
+		align-items: center;
+		
+	}
 		.title {
 			margin-bottom: 0;	
 		}
@@ -20,17 +24,42 @@
 .title__sub {}
 .title__headin {}
 .works__navs {
-	margin-left: 15px;
 	display: flex;
 	gap: 16px;
+
+	@include max-screen($xss){
+		display: none;
+		
+	}
 }
 .works__nav {
 	width: 40px;
 height: 40px;
 	background: #EAE6FE;
 border-radius: 16px;
+
+
+	&.swiper-button-disabled{
+		opacity: 0.5;
+	}
+
+	@media (any-hover: hover) { //только для устройств с ховером
+		cursor: pointer;
+	}
+
+	@include min-screen($xss){
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+	}
 }
-.works__nav--prev {}
+.works__nav--prev {
+	&:before{
+		transform: rotate(180deg);
+	}
+
+}
 .works__nav--next {}
 .title {}
 .title__sub {}
@@ -39,18 +68,59 @@ border-radius: 16px;
 .swiper-container {}
 .works__cards {
 	max-width: 100%;
+	@include max-screen($xss){
+		margin-left: 0;
+		margin-right: -30px;
+	}
 }
-.swiper-wrapper {}
+.swiper-wrapper {
+
+}
 .works__card {}
-.card-works {}
+.card-works {
+	border-radius: 8px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	// outline: 1px solid;
+	height: auto;
+}
 .swiper-slide {}
 ._fit {}
-.card-works__img {}
-._fit-img {}
-.card-works__bottom {}
-.card-works__title {}
-.card-works__tech {}
-.card-works__tech-name {}
-.card-works__link {}
+.card-works__img {
+	margin-bottom: 24px;
+	height: 0;
+	padding-bottom: prc(302, 363);
+	flex: 0 0 auto;
+	._fit-img {
+		object-position: top;
+		
+	}
+}
+.card-works__bottom {
+	display: flex;
+	flex-direction: column;
+	// justify-self: end;
+	padding-bottom: 24px;
+	flex: 1 1 auto;
+}
+.card-works__title {
+	margin-bottom: 15px;
+}
+.card-works__tech {
+	margin-top: auto;
+	display: flex;
+	align-items: center;
+	gap: 18px;
+	a{
+	color: #656D72;
+		
+	}
+}
+.card-works__tech-name {
+}
+.card-works__link {
+	font-size: 20px;
+}
 .swiper-button-prev {}
 .swiper-button-next {}
