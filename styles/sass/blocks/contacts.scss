@@ -10,8 +10,15 @@
 .contacts__form {}
 .formhandler {}
 .formhandler__notices {}
-.form__input {}
+.form__input {
+	margin-bottom: 15px;
+}
 .formhandler__field {}
+.form__area{
+	height: 190px;
+	resize:vertical;
+	resize:none;
+}
 .btn {}
 .btn-fw {}
 .contacts__address {}

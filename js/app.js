@@ -220,9 +220,15 @@ if(document.querySelector('.works__cards') !== null){
 	  fields: {
 	    name: {
 	      validation: 'isName',
+	      notice: {
+	      	message: 'Заполните, это обязательное поле',
+	      }
 	    },
 	    email: {
 	      validation: 'isEmail',
+	      notice: {
+	      	message: 'Нужен правильный емейл адрес'
+	      }
 	    },
 	    message: {
 	      validation: 'isNonEmpty',
