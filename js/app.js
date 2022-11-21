@@ -31,7 +31,7 @@ Swiper.use([Navigation]);
 
 //- All in one file--------------------------
 require('./vendor/service-functions/all-functions.js')
-
+// import siblings from './vendor/service-functions/all-functions.js'
 
 //- WITH JQUERY===================================
 //- jquery--------------------------
@@ -82,7 +82,7 @@ require('./vendor/service-functions/all-functions.js')
 // require('./vendor/libs-vanilla/tabs/tabs-pure.js')
 
 //- tabs-accordion-combine--------------------------
-// require('./vendor/libs-vanilla/tabs-accordion-combine/tabs-accordion.js')
+require('./vendor/libs-vanilla/tabs-accordion-combine/tabs-accordion.js')
 	
 //- micromodal--------------------------
 // require('./vendor/libs-vanilla/swiper/swiper-bundle.min.js')
@@ -212,9 +212,9 @@ if(document.querySelector('.works__cards') !== null){
 	}
 //---------------END Swiper
 
-	$.scrollify({
-		section : "section",
-	});
+	// $.scrollify({
+	// 	section : "section",
+	// });
 
 	const formhandler = new FormHandler({
 	  fields: {
@@ -236,4 +236,6 @@ if(document.querySelector('.works__cards') !== null){
 	  },
 	});
 
+	// console.log(siblings(document.querySelectorAll('.accordion__item')[0]))
+	console.log(isMobile.any())
 });
