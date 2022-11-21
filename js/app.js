@@ -7,7 +7,11 @@ window.$ = $
 // import Parallax from 'parallax-js'
 
 import Swiper, { Navigation } from 'swiper';
+import FormHandler from 'formhandler.js';
+
 Swiper.use([Navigation]);
+
+
 //- SERVIVE FUNCTIONS==================
 
 //- remove-class--------------------------
@@ -78,7 +82,7 @@ require('./vendor/service-functions/all-functions.js')
 // require('./vendor/libs-vanilla/tabs/tabs-pure.js')
 
 //- tabs-accordion-combine--------------------------
-require('./vendor/libs-vanilla/tabs-accordion-combine/tabs-accordion.js')
+// require('./vendor/libs-vanilla/tabs-accordion-combine/tabs-accordion.js')
 	
 //- micromodal--------------------------
 // require('./vendor/libs-vanilla/swiper/swiper-bundle.min.js')
@@ -208,7 +212,22 @@ if(document.querySelector('.works__cards') !== null){
 	}
 //---------------END Swiper
 
-	$.scrollify({
-		section : "section",
+	// $.scrollify({
+	// 	section : "section",
+	// });
+
+	const formhandler = new FormHandler({
+	  fields: {
+	    name: {
+	      validation: 'isName',
+	    },
+	    email: {
+	      validation: 'isEmail',
+	    },
+	    message: {
+	      validation: 'isNonEmpty',
+	    }
+	  },
 	});
+
 });

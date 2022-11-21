@@ -1,0 +1,20 @@
+.contacts {}
+.wrapper {}
+.contacts__content {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	@include adaptive-value('column-gap', 104, 0, 1);
+}
+.sect-content {}
+.form {}
+.contacts__form {}
+.formhandler {}
+.formhandler__notices {}
+.form__input {}
+.formhandler__field {}
+.btn {}
+.btn-fw {}
+.contacts__address {}
+.contacts__row {}
+.contacts__icon {}
+.contacts__value {}
