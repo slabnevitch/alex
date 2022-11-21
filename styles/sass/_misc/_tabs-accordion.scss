@@ -1,5 +1,5 @@
 @mixin tabs-acc($checkpoint){ // $checkpoint должен сответствовать атрибуту data-point в хтмл, например data-point="sm"
-	.tabs__buttons{
+	.tabs-buttons{
 		@media screen and (min-width: $checkpoint){
 			display: flex;
 		}
@@ -23,6 +23,6 @@
 		}
 	}
 }
-// .combine{
-// 	@include tabs-acc($sm);
-// }
+.combine{
+	@include tabs-acc($sm);
+}

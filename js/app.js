@@ -1,7 +1,7 @@
 // // Import jQuery module (npm i jquery)
-// import $ from 'jquery'
-// window.jQuery = $
-// window.$ = $
+import $ from 'jquery'
+window.jQuery = $
+window.$ = $
 
 // // Import vendor jQuery plugin example (not module)
 // import Parallax from 'parallax-js'
@@ -76,6 +76,9 @@ require('./vendor/service-functions/all-functions.js')
 	
 //- tabs--------------------------
 // require('./vendor/libs-vanilla/tabs/tabs-pure.js')
+
+//- tabs-accordion-combine--------------------------
+require('./vendor/libs-vanilla/tabs-accordion-combine/tabs-accordion.js')
 	
 //- micromodal--------------------------
 // require('./vendor/libs-vanilla/swiper/swiper-bundle.min.js')
@@ -133,6 +136,7 @@ require('./vendor/service-functions/all-functions.js')
 //- end VANILLA JS===================================
 
 // require('./vendor/color-scheme-switcher.js')
+require('./vendor/jquery-scrollify/jquery.scrollify.js')
 
 
 
@@ -203,4 +207,8 @@ if(document.querySelector('.works__cards') !== null){
 		});
 	}
 //---------------END Swiper
+
+	$.scrollify({
+		section : "section",
+	});
 });
