@@ -212,9 +212,9 @@ if(document.querySelector('.works__cards') !== null){
 	}
 //---------------END Swiper
 
-	// $.scrollify({
-	// 	section : "section",
-	// });
+	$.scrollify({
+		section : "section",
+	});
 
 	const formhandler = new FormHandler({
 	  fields: {
