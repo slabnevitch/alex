@@ -1,15 +1,15 @@
 // // Import jQuery module (npm i jquery)
-// import $ from 'jquery'
-// window.jQuery = $
-// window.$ = $
+import $ from 'jquery'
+window.jQuery = $
+window.$ = $
 
 // // Import vendor jQuery plugin example (not module)
 // import Parallax from 'parallax-js'
 
-import Swiper, { Navigation } from 'swiper';
+// import Swiper, { Navigation } from 'swiper';
 // import FormHandler from 'formhandler.js';
 
-Swiper.use([Navigation]);
+// Swiper.use([Navigation]);
 
 
 //- SERVIVE FUNCTIONS==================
@@ -47,7 +47,7 @@ require('./vendor/service-functions/all-functions.js')
 // require('./vendor/libs/magnific-popup/dist/jquery.magnific-popup.min.js')
 	
 //- slick--------------------------
-// require('./vendor/libs/slick/slick.min.js')
+require('./vendor/libs/slick/slick.min.js')
 	
 //- slick-master (без лишних контейнеров)--------------------------
 // require('./vendor/libs/slick-master/slick.js')
@@ -140,7 +140,7 @@ var MicroModal = require('./vendor/libs-vanilla/micromodal/micromodal.js')
 //- end VANILLA JS===================================
 
 // require('./vendor/color-scheme-switcher.js')
-require('./vendor/jquery-scrollify/jquery.scrollify.js')
+// require('./vendor/jquery-scrollify/jquery.scrollify.js')
 
 document.querySelector('.toggle-mnu').onclick = function(e) {
 	this.classList.toggle('on');
