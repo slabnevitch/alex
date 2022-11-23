@@ -3,13 +3,16 @@
 		<form action="#" class="formhandler form contacts__form" method="POST">
 			<div class="formhandler__notices"></div>
 			<input autocomplete="off" type="text" name="name" class="form__input formhandler__field" placeholder="Name"/>
+			<input autocomplete="off" type="tel" name="phone" id="phone" class="form__input formhandler__field" />
 			<input autocomplete="off" type="text" name="email" class="form__input formhandler__field" placeholder="Email"/>
 			<textarea class="form__area formhandler__field" name="message" cols="30" rows="10" placeholder="Message"></textarea>
 
           	<button class="btn btn-fw formhandler__submit" type="submit" name="submit">Send Message</button>
 		</form>
 
+
 		<address class="contacts__address">
+			<button data-tippy-content="Tooltip">Text</button>
 			<div class="contacts__row">
 				<div class="contacts__icon">
 					<img src="" alt="">

@@ -47,7 +47,7 @@ require('./vendor/service-functions/all-functions.js')
 // require('./vendor/libs/magnific-popup/dist/jquery.magnific-popup.min.js')
 	
 //- slick--------------------------
-require('./vendor/libs/slick/slick.min.js')
+// require('./vendor/libs/slick/slick.min.js')
 	
 //- slick-master (без лишних контейнеров)--------------------------
 // require('./vendor/libs/slick-master/slick.js')
@@ -64,7 +64,7 @@ require('./vendor/libs/slick/slick.min.js')
 // require('./vendor/libs-vanilla/dynamic-adaptive/da(es6).js')
 	
 //- slideout--------------------------
-// require('./vendor/libs-vanilla/slideout/slideout.js')
+var Slideout = require('./vendor/libs-vanilla/slideout/slideout.js')
 
 //- multilevel-panel--------------------------
 // require('./vendor/libs-vanilla/multilevel-panel/multilevel-panel.js')
@@ -116,8 +116,8 @@ var MicroModal = require('./vendor/libs-vanilla/micromodal/micromodal.js')
 //- tippy--------------------------
 //- https://atomiks.github.io/tippyjs/
 //- base using:  html: <button data-tippy-content="Tooltip">Text</button>; js: tippy('[data-tippy-content]');
-// require('./vendor/libs-vanilla/tippy/popper.min.js')
-// require('./vendor/libs-vanilla/tippy/tippy-bundle.umd.js')
+// var Popper = require('./vendor/libs-vanilla/tippy/popper.min.js')
+// require('./vendor/libs-vanilla/tippy/tippy-bundle.umd.js') // НЕ РАБОТАЕТ!
 
 //- sticky-sidebar --------------------------
 //- https://abouolia.github.io/sticky-sidebar/#usage
@@ -165,6 +165,7 @@ console.log(MicroModal)
 
 
 document.addEventListener('DOMContentLoaded', () => {
+	tippy('[data-tippy-content]');
 	//---------------Swiper
 // if(document.querySelector('.works__cards') !== null){
  //  const swiper = new Swiper('.works__cards', {
