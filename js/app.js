@@ -1,7 +1,7 @@
 // // Import jQuery module (npm i jquery)
-import $ from 'jquery'
-window.jQuery = $
-window.$ = $
+// import $ from 'jquery'
+// window.jQuery = $
+// window.$ = $
 
 // // Import vendor jQuery plugin example (not module)
 // import Parallax from 'parallax-js'
@@ -31,7 +31,7 @@ window.$ = $
 
 //- All in one file--------------------------
 require('./vendor/service-functions/all-functions.js')
-// import siblings from 'service-functions/siblings'
+
 
 //- WITH JQUERY===================================
 //- jquery--------------------------
@@ -41,7 +41,9 @@ require('./vendor/service-functions/all-functions.js')
 // require('./vendor/libs/jquery-ui/jquery-ui.min.js')
 	
 //- dl-menu--------------------------
-// require('./vendor/libs/dlmenu/js/jquery.dlmenu.js')
+// require('./vendor/libs/dlmenu/js/modernizr.custom.js')
+// var dlmenu = require('./vendor/libs/dlmenu/js/jquery.dlmenu.js')
+// папку dl-menu/fonts копировать в главную fonts и переименовать в "dl-menu-font"
 
 //- magnific-popup--------------------------
 // require('./vendor/libs/magnific-popup/dist/jquery.magnific-popup.min.js')
@@ -64,7 +66,7 @@ require('./vendor/service-functions/all-functions.js')
 // require('./vendor/libs-vanilla/dynamic-adaptive/da(es6).js')
 	
 //- slideout--------------------------
-var Slideout = require('./vendor/libs-vanilla/slideout/slideout.js')
+// var Slideout = require('./vendor/libs-vanilla/slideout/slideout.js')
 
 //- multilevel-panel--------------------------
 // require('./vendor/libs-vanilla/multilevel-panel/multilevel-panel.js')
@@ -85,7 +87,7 @@ var Slideout = require('./vendor/libs-vanilla/slideout/slideout.js')
 require('./vendor/libs-vanilla/tabs-accordion-combine/tabs-accordion.js')
 	
 //- micromodal--------------------------
-var MicroModal = require('./vendor/libs-vanilla/micromodal/micromodal.js')
+// var MicroModal = require('./vendor/libs-vanilla/micromodal/micromodal.js')
 	
 //- swiper--------------------------
 // require('./vendor/libs-vanilla/swiper/swiper-bundle.min.js')
@@ -116,8 +118,7 @@ var MicroModal = require('./vendor/libs-vanilla/micromodal/micromodal.js')
 //- tippy--------------------------
 //- https://atomiks.github.io/tippyjs/
 //- base using:  html: <button data-tippy-content="Tooltip">Text</button>; js: tippy('[data-tippy-content]');
-// var Popper = require('./vendor/libs-vanilla/tippy/popper.min.js')
-// require('./vendor/libs-vanilla/tippy/tippy-bundle.umd.js') // НЕ РАБОТАЕТ!
+// import tippy from 'tippy.js';
 
 //- sticky-sidebar --------------------------
 //- https://abouolia.github.io/sticky-sidebar/#usage
@@ -148,25 +149,9 @@ document.querySelector('.toggle-mnu').onclick = function(e) {
 	document.documentElement.classList.toggle('lock');
 }
 
-// micromodal
-if(document.querySelector('.modal') !== null){
-console.log(MicroModal)
-	MicroModal.init({
-		openTrigger: 'data-micromodal-open', 
-		closeTrigger: 'data-micromodal-close',
-		openClass: 'is-open', 
-		disableFocus: true, 
-		awaitOpenAnimation: true,
-		onShow: modal => console.info(`${modal.id} is shown`), // [1]
-		onClose: modal => console.info(`${modal.id} is hidden`)
-	});		
-}
-// END micromodal
-
-
 document.addEventListener('DOMContentLoaded', () => {
-	tippy('[data-tippy-content]');
-	//---------------Swiper
+
+//---------------Swiper
 // if(document.querySelector('.works__cards') !== null){
  //  const swiper = new Swiper('.works__cards', {
 	// 	  /*
