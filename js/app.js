@@ -37,7 +37,7 @@ require('./vendor/service-functions/all-functions.js')
 //- jquery--------------------------
 // require('./vendor/libs/jquery/jquery-3.1.1.min.js')
 
-//- jquery-UI--------------------------
+//- jquery-UI--------------------------Не проверено!
 // require('./vendor/libs/jquery-ui/jquery-ui.min.js')
 	
 //- dl-menu--------------------------
@@ -54,7 +54,7 @@ require('./vendor/service-functions/all-functions.js')
 //- slick-master (без лишних контейнеров)--------------------------
 // require('./vendor/libs/slick-master/slick.js')
 		
-//- superfish--------------------------
+//- superfish--------------------------Не проверено!
 // require('./vendor/libs/superfish/dist/js/hoverIntent.js')
 // require('./vendor/libs/superfish/dist/js/superfish.min.js')
 
@@ -68,13 +68,13 @@ require('./vendor/service-functions/all-functions.js')
 //- slideout--------------------------
 // var Slideout = require('./vendor/libs-vanilla/slideout/slideout.js')
 
-//- multilevel-panel--------------------------
+//- multilevel-panel--------------------------Не проверено!
 // require('./vendor/libs-vanilla/multilevel-panel/multilevel-panel.js')
 
 //- multilevel-dropdown-menu--------------------------
 // require('./vendor/libs-vanilla/multilevel-dropdown/multidropdown.js')
 		
-//- lazysizes--------------------------
+//- lazysizes--------------------------Не проверено!
 // require('./vendor/libs-vanilla/lazysizes/lazysizes.min.js')
 	
 //- accordion--------------------------
@@ -92,7 +92,7 @@ require('./vendor/libs-vanilla/tabs-accordion-combine/tabs-accordion.js')
 //- swiper--------------------------
 // require('./vendor/libs-vanilla/swiper/swiper-bundle.min.js')
 
-//- tiny-slider--------------------------
+//- tiny-slider--------------------------Не проверено!
 // require('./vendor/libs-vanilla/tiny-slider/dist/tiny-slider.js')
 
 //- wNumb--------------------------
@@ -120,20 +120,20 @@ require('./vendor/libs-vanilla/tabs-accordion-combine/tabs-accordion.js')
 //- base using:  html: <button data-tippy-content="Tooltip">Text</button>; js: tippy('[data-tippy-content]');
 // import tippy from 'tippy.js';
 
-//- sticky-sidebar --------------------------
+//- sticky-sidebar -------------------------- Не проверено!
 //- https://abouolia.github.io/sticky-sidebar/#usage
 // require('./vendor/libs-vanilla/sticky-sidebar/dist/resizeSensor.js')
 // require('./vendor/libs-vanilla/sticky-sidebar/dist/sticky-sidebar.min.js')
 
 //- simplebar--------------------------
 //- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
-// require('./vendor/libs-vanilla/simplebar/simplebar.min.js')
+// var SimpleBar = require('./vendor/libs-vanilla/simplebar/simplebar.min.js')
 	
 //- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
 // require('./vendor/libs-vanilla/fstdropdown/fstdropdown.min.js')
 
 //- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
-// require('./vendor/libs-vanilla/baguetteBox/dist/baguetteBox.min.js')
+// var baguetteBox = require('./vendor/libs-vanilla/baguetteBox/dist/baguetteBox.min.js')
 
 //- counter--------------------------
 // require('./vendor/libs-vanilla/counter/counter.js')
