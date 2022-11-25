@@ -6,10 +6,10 @@
 // // Import vendor jQuery plugin example (not module)
 // import Parallax from 'parallax-js'
 
-// import Swiper, { Navigation } from 'swiper';
+import Swiper, { Navigation, Mousewheel } from 'swiper';
 // import FormHandler from 'formhandler.js';
 
-// Swiper.use([Navigation]);
+Swiper.use([Navigation, Mousewheel]);
 
 
 //- SERVIVE FUNCTIONS==================
@@ -152,63 +152,69 @@ document.querySelector('.toggle-mnu').onclick = function(e) {
 document.addEventListener('DOMContentLoaded', () => {
 
 //---------------Swiper
-// if(document.querySelector('.works__cards') !== null){
- //  const swiper = new Swiper('.works__cards', {
-	// 	  /*
-	// 		effect: 'fade',
-	// 		autoplay: {
-	// 			delay: 3000,
-	// 			disableOnInteraction: false,
-	// 		},
-	// 		*/
-	// 		observer: true,
-	// 		observeParents: true,
-	// 		slidesPerView: 3,
-	// 		//spaceBetween: 0,
-	// 		//autoHeight: true,
-	// 		//speed: 800,
-	// 		//touchRatio: 0,
-	// 		//simulateTouch: false,
-	// 		//loop: true,
-	// 		//preloadImages: false,
-	// 		//lazy: true,
-	// 	  // direction: 'vertical',
-	// 	  // loop: true,
-	// 	  breakpoints: {
-	// 	    // when window width is >= 320px
-	// 	    320: {
-	// 	    	slidesPerView: 1.2,
-	// 	    	spaceBetween: 15,
-	// 		    },
-	// 	    // when window width is >= 480px
-	// 	    480: {
-	// 	    	slidesPerView: 2,
-	// 	    	spaceBetween: 30,
+if(document.querySelector('.works__cards') !== null){
+  const swiper = new Swiper('.works__cards', {
+		  /*
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+			observer: true,
+			mousewheel:  {
+		    invert: true,
+		    eventsTarget: '.works__cards'
+		    // releaseOnEdges: true
+		  },
+			observeParents: true,
+			slidesPerView: 3,
+			//spaceBetween: 0,
+			//autoHeight: true,
+			//speed: 800,
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+		  // direction: 'vertical',
+		  // loop: true,
+		  breakpoints: {
+		    // when window width is >= 320px
+		    320: {
+		    	slidesPerView: 1.2,
+		    	spaceBetween: 15,
+			    },
+		    // when window width is >= 480px
+		    480: {
+		    	slidesPerView: 2,
+		    	spaceBetween: 30,
 
-	// 	    },
-	// 	    // when window width is >= 640px
-	// 	    768: {
-	// 	    	slidesPerView: 3,
-	// 	    	spaceBetween: 56
-	// 	    }
-	// 	  },
+		    },
+		    // when window width is >= 640px
+		    768: {
+		    	slidesPerView: 3,
+		    	spaceBetween: 56
+		    }
+		  },
 
-	// 	  // Navigation arrows
-	// 	  navigation: {
-	// 	  	nextEl: '.works__nav--next',
-	// 	  	prevEl: '.works__nav--prev',
-	// 	  	// enabled: false
-	// 	  },
+		  // Navigation arrows
+		  navigation: {
+		  	nextEl: '.works__nav--next',
+		  	prevEl: '.works__nav--prev',
+		  	// enabled: false
+		  },
 
-	// 	  // And if we need scrollbar
-	// 	  scrollbar: {
-	// 	  	el: '.swiper-scrollbar',
-	// 	  	hide: false,
-	// 	  	draggable: true
-	// 	  },
-	// 	});
-	// }
+		  // And if we need scrollbar
+		  scrollbar: {
+		  	el: '.swiper-scrollbar',
+		  	hide: false,
+		  	draggable: true
+		  },
+		});
+	}
 //---------------END Swiper
+console.log(Swiper)
 
 	// $.scrollify({
 	// 	section : "section",
