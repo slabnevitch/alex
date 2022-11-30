@@ -25,6 +25,13 @@ body{
 	}
 }
 
+#wrapper-for-scroll-fix{
+	overflow: hidden;
+}
+#wrapper-for-scroll-fix.modal-open {
+    padding-right: var(--scroll-width);
+}
+
 // Прижать футер к низу
 
 // html, body{

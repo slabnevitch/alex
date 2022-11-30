@@ -87,7 +87,7 @@ require('./vendor/service-functions/all-functions.js')
 require('./vendor/libs-vanilla/tabs-accordion-combine/tabs-accordion.js')
 	
 //- micromodal--------------------------
-// var MicroModal = require('./vendor/libs-vanilla/micromodal/micromodal.js')
+var MicroModal = require('./vendor/libs-vanilla/micromodal/micromodal.js')
 	
 //- swiper--------------------------
 // require('./vendor/libs-vanilla/swiper/swiper-bundle.min.js')
@@ -137,6 +137,8 @@ require('./vendor/libs-vanilla/tabs-accordion-combine/tabs-accordion.js')
 
 //- counter--------------------------
 // require('./vendor/libs-vanilla/counter/counter.js')
+
+var tingle = require('./vendor/libs-vanilla/tingle-master/dist/tingle.js')
 	
 //- end VANILLA JS===================================
 
@@ -147,9 +149,52 @@ document.querySelector('.toggle-mnu').onclick = function(e) {
 	this.classList.toggle('on');
 	document.documentElement.classList.toggle('menu-opened');
 	document.documentElement.classList.toggle('lock');
+
 }
 
+var scrollWidth = {
+    init: function () {
+      var div = document.createElement('div');
+
+      div.style.overflowY = 'scroll';
+      div.style.width = '50px';
+      div.style.height = '50px';
+
+      document.body.append(div);
+
+      var scrollWidth = div.offsetWidth - div.clientWidth;
+
+      div.remove();
+
+     	var root = document.documentElement;
+      root.style.setProperty('--scroll-width', scrollWidth + 'px');
+       document.querySelector('.header').style.setProperty('--scroll-width', scrollWidth + 'px');
+    }
+  };
+
+  scrollWidth.init();
+
 document.addEventListener('DOMContentLoaded', () => {
+	// micromodal
+if(document.querySelector('.modal') !== null){
+	console.log('modal!')
+	MicroModal.init({
+		openTrigger: 'data-micromodal-open', 
+		closeTrigger: 'data-micromodal-close',
+		openClass: 'is-open', 
+		disableFocus: true, 
+		awaitOpenAnimation: true,
+		disableScroll: true,
+		 onShow: modal => {console.log(arguments)
+		 	document.querySelector('#wrapper-for-scroll-fix').classList.add('modal-open');
+		 }, // [1]
+ 	 onClose: modal => {
+ 	 	console.info(`${modal.id} is hidden`);
+ 	 	document.querySelector('#wrapper-for-scroll-fix').classList.remove('modal-open');
+ 	 }
+	});		
+}
+// END micromodal
 
 //---------------Swiper
 if(document.querySelector('.works__cards') !== null){
@@ -214,7 +259,6 @@ if(document.querySelector('.works__cards') !== null){
 		});
 	}
 //---------------END Swiper
-console.log(Swiper)
 
 	// $.scrollify({
 	// 	section : "section",
